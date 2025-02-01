@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose for My Love</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #ffccdd, #ff99cc);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+        .container {
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+        .rose {
+            width: 120px;
+            animation: grow 2s infinite alternate;
+            margin-top: 10px;
+        }
+        @keyframes grow {
+            from { transform: scale(0.9); }
+            to { transform: scale(1.1); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            color: #d63384;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            color: #333;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #d63384;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #b0256b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rose for My Love</h1>
+        <p>You are the most beautiful flower in my garden of life. 🌹</p>
+        <img class="rose" src="./images/pexels-pixabay-56866.jpg" alt="Rose">
+        <br>
+        <button class="button" onclick="showMessage()">Click for a Surprise</button>
+        <p id="message" style="display:none; font-size: 1.5rem; color: #d63384; margin-top: 10px;">I Love You! ❤️</p>
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
